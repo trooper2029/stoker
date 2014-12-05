@@ -26,7 +26,7 @@ $roots_includes = array(
 
 foreach ($roots_includes as $file) {
   if (!$filepath = locate_template($file)) {
-    trigger_error(sprintf(__('Error locating %s for inclusion', 'roots'), $file), E_USER_ERROR);
+    trigger_error(sprintf(__('Error locating %s for inclusion', 'stoker'), $file), E_USER_ERROR);
   }
 
   require_once $filepath;
